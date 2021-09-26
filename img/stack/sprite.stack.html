@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-		<title>SVG stack preview | svg-sprite</title>
-		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>SVG stack preview | svg-sprite</title>
+    <style>
+      @charset "UTF-8";
+      body {
+        padding: 0;
+        margin: 0;
+        color: #666;
+        background: #fafafa;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.4;
+      }
+      header {
+        display: block;
+        padding: 3em 3em 2em 3em;
+        background-color: #fff;
+      }
+      header p {
+        margin: 2em 0 0 0;
+      }
+      section {
+        border-top: 1px solid #eee;
+        padding: 2em 3em 0 3em;
+      }
+      section ul {
+        margin: 0;
+        padding: 0;
+      }
+      section li {
+        display: inline;
+        display: inline-block;
+        background-color: #fff;
+        position: relative;
+        margin: 0 2em 2em 0;
+        vertical-align: top;
+        border: 1px solid #ccc;
+        padding: 1em 1em 3em 1em;
+        cursor: default;
+      }
+      .icon-box {
+        margin: 0;
+        width: 144px;
+        height: 144px;
+        position: relative;
+        background: #ccc
+          url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=")
+          top left repeat;
+        border: 1px solid #ccc;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+      .icon {
+        display: inline;
+        display: inline-block;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        left: 1em;
+        right: 1em;
+        bottom: 1em;
+      }
+      footer {
+        display: block;
+        margin: 0;
+        padding: 0 3em 3em 3em;
+      }
+      footer p {
+        margin: 0;
+        font-size: 0.7em;
+      }
+      footer a {
+        color: #0f7595;
+        margin-left: 0;
+      }
+    </style>
 
-<!--
+    <!--
 
 Sprite shape dimensions
 ====================================================================================================
@@ -16,29 +100,70 @@ They might well be outsourced to an external stylesheet of course.
 
 -->
 
-<style type="text/css">
-	.svg-big-purple-circle-dims { width: 343px; height: 257px; }
-	.svg-purple-circle-dims { width: 235px; height: 218px; }
-	.svg-turquoise-circle-dims { width: 133px; height: 133px; }
-</style>
+    <style type="text/css">
+      .svg-big-purple-circle-dims {
+        width: 343px;
+        height: 257px;
+      }
+      .svg-features-asist-dims {
+        width: 68px;
+        height: 68px;
+      }
+      .svg-features-custom-dims {
+        width: 68px;
+        height: 68px;
+      }
+      .svg-features-setup-dims {
+        width: 68px;
+        height: 68px;
+      }
+      .svg-features-telegram-dims {
+        width: 68px;
+        height: 68px;
+      }
+      .svg-purple-circle-dims {
+        width: 235px;
+        height: 218px;
+      }
+      .svg-turquoise-circle-dims {
+        width: 133px;
+        height: 133px;
+      }
+    </style>
 
-<!--
+    <!--
 ====================================================================================================
 -->
-
-	</head>
-	<body>
-		<header>
-			<h1>SVG stack preview</h1>
-			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
-			<ul>
-				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
-				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
-			</ul>
-		</header>
-		<section>
-
-<!--
+  </head>
+  <body>
+    <header>
+      <h1>SVG stack preview</h1>
+      <p>
+        This preview features an SVG stack. Please have a look at the HTML source for further details and be
+        aware of the following constraints:
+      </p>
+      <ul>
+        <li>
+          Your browser has to
+          <a href="http://caniuse.com/#feat=svg-fragment" target="_blank" rel="noopener noreferrer"
+            >support SVG fragment identifiers</a
+          >
+          for SVG stacks to work.
+        </li>
+        <li>
+          Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will
+          have to use some prolyfill like
+          <a
+            href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js"
+            target="_blank"
+            rel="noopener noreferrer"
+            >fixsvgstack.jquery.js</a
+          >.
+        </li>
+      </ul>
+    </header>
+    <section>
+      <!--
 
 SVG stack
 ====================================================================================================
@@ -48,44 +173,77 @@ selector is used to show the very shape that is referenced by the fragment ident
 
 -->
 
-			<ul>
+      <ul>
+        <li title="big-purple-circle">
+          <div class="icon-box">
+            <!-- big-purple-circle -->
+            <img
+              src="../icons/icons.svg#big-purple-circle"
+              class="svg-big-purple-circle-dims"
+              alt="big-purple-circle"
+            />
+          </div>
+          <h2>big-purple-circle</h2>
+        </li>
+        <li title="features-asist">
+          <div class="icon-box">
+            <!-- features-asist -->
+            <img src="../icons/icons.svg#features-asist" class="feature__ico" alt="features-asist" />
+          </div>
+          <h2>features-asist</h2>
+        </li>
+        <li title="features-custom">
+          <div class="icon-box">
+            <!-- features-custom -->
+            <img src="../icons/icons.svg#features-custom" class="feature__ico" alt="features-custom" />
+          </div>
+          <h2>features-custom</h2>
+        </li>
+        <li title="features-setup">
+          <div class="icon-box">
+            <!-- features-setup -->
+            <img src="../icons/icons.svg#features-setup" class="feature__ico" alt="features-setup" />
+          </div>
+          <h2>features-setup</h2>
+        </li>
+        <li title="features-telegram">
+          <div class="icon-box">
+            <!-- features-telegram -->
+            <img src="../icons/icons.svg#features-telegram" class="feature__ico" alt="features-telegram" />
+          </div>
+          <h2>features-telegram</h2>
+        </li>
+        <li title="purple-circle">
+          <div class="icon-box">
+            <!-- purple-circle -->
+            <img src="../icons/icons.svg#purple-circle" class="svg-purple-circle-dims" alt="purple-circle" />
+          </div>
+          <h2>purple-circle</h2>
+        </li>
+        <li title="turquoise-circle">
+          <div class="icon-box">
+            <!-- turquoise-circle -->
+            <img
+              src="../icons/icons.svg#turquoise-circle"
+              class="svg-turquoise-circle-dims"
+              alt="turquoise-circle"
+            />
+          </div>
+          <h2>turquoise-circle</h2>
+        </li>
+      </ul>
 
-				<li title="big-purple-circle">
-					<div class="icon-box">
-
-						<!-- big-purple-circle -->
-						<img src="../icons/icons.svg#big-purple-circle" class="svg-big-purple-circle-dims" alt="big-purple-circle"/>
-
-					</div>
-					<h2>big-purple-circle</h2>
-				</li>
-				<li title="purple-circle">
-					<div class="icon-box">
-
-						<!-- purple-circle -->
-						<img src="../icons/icons.svg#purple-circle" class="svg-purple-circle-dims" alt="purple-circle"/>
-
-					</div>
-					<h2>purple-circle</h2>
-				</li>
-				<li title="turquoise-circle">
-					<div class="icon-box">
-
-						<!-- turquoise-circle -->
-						<img src="../icons/icons.svg#turquoise-circle" class="svg-turquoise-circle-dims" alt="turquoise-circle"/>
-
-					</div>
-					<h2>turquoise-circle</h2>
-				</li>
-			</ul>
-
-<!--
+      <!--
 ====================================================================================================
 -->
-
-		</section>
-		<footer>
-			<p>Generated at Sun, 26 Sep 2021 15:01:58 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
-		</footer>
-	</body>
+    </section>
+    <footer>
+      <p>
+        Generated at Sun, 26 Sep 2021 15:19:12 GMT by
+        <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer"
+          >svg-sprite</a
+        >.
+      </p>
+    </footer>
+  </body>
 </html>

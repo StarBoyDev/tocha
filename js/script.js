@@ -15,8 +15,10 @@ testWebP(function (support) {
   }
 });
 
+// Активація бергер меню
 $(document).ready(function () {
   $(".burger-menu").click(function (event) {
     $(".burger-menu, .header__login, .burger-menu__line").toggleClass("active");
+    $("body").toggleClass("no-scroll");
   });
 });

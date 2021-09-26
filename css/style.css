@@ -427,6 +427,10 @@ body {
   background-color: #f8fbff;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -708,7 +712,7 @@ button:focus {
   line-height: 26px;
 }
 
-.feature__illustation {
+.feature__illustration {
   max-width: 411px;
 }
 
@@ -825,7 +829,7 @@ button:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     background-color: #f8fbff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -835,7 +839,6 @@ button:focus {
 
   .header__login.active {
     top: 0;
-    overflow: hidden;
   }
 
   .header__login-wrapper {
@@ -856,6 +859,7 @@ button:focus {
 
   .header__login-btn {
     margin-bottom: 11px;
+    margin-right: 0;
   }
 
   .burger-menu {
@@ -933,6 +937,10 @@ button:focus {
     width: 177px;
   }
 
+  .intro {
+    margin-bottom: 60px;
+  }
+
   .svg-purple-circle-dims {
     display: none;
   }
@@ -945,7 +953,7 @@ button:focus {
     display: none;
   }
 
-  .feature__illustation {
+  .feature__illustration {
     max-width: 300px;
   }
 }

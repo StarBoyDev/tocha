@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "gilroy-400";
   font-display: swap;
@@ -762,12 +764,11 @@ button:focus {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33%;
           flex: 0 1 33%;
-  padding: 0 15px;
+  padding: 0 15px 24px 15px;
 }
 
 .tariff__item {
   max-width: 350px;
-  height: 100%;
   max-height: 387px;
   text-align: center;
   padding: 10px 30px 50px 30px;
@@ -820,12 +821,98 @@ button:focus {
   width: 100%;
   font-size: 18px;
   padding: 12px 0;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 50px;
+}
+
+/* Слайдер 
+========================================*/
+
+.slick-slider {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Слайдер запущен */
+
+/* Слайдер с точками */
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* Слайд */
+
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+
+/* Слайд по центру */
+
+/* Клонированный слайд */
+
+/* Стрелка */
+
+/* Стрелка влево */
+
+/* Стрелка вправо */
+
+/* Стрелка не активная */
+
+/* Точки (булиты) */
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+.slick-dots li {
+  list-style: none;
+}
+
+/* Активная точка */
+
+.slick-dots li.slick-active button {
+  background-color: #685ed6;
+}
+
+/* Элемент точки */
+
+.slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 6px;
+  border: 1px solid #685ed6;
+}
+
+/*tariff slider 
+=======================================*/
+
+.tariff__list.slick-dots {
+  padding-left: 0;
 }
 
 @media (min-width: 992px) {
@@ -852,12 +939,7 @@ button:focus {
   }
 
   .tariff__item {
-    padding: 10px 15px 30px 15px;
-  }
-
-  .tariff__button {
-    bottom: 35px;
-    max-width: 250px;
+    padding: 10px 15px 50px 15px;
   }
 }
 
@@ -930,32 +1012,22 @@ button:focus {
     font-size: 16px;
   }
 
-  .tariff__list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .tariff {
+    padding-top: 54px;
   }
 
-  .tariff__wrapper {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 45%;
-            flex: 1 1 45%;
-    margin-top: 70px;
+  .tariff__title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .tariff__subtitle {
+    font-size: 20px;
+    margin-bottom: 36px;
   }
 
   .tariff__item {
     padding: 10px 30px 30px 30px;
-  }
-
-  .tariff__item:last-child {
-    margin: 0 auto;
-  }
-
-  .tariff__button {
-    max-width: 280px;
-  }
-
-  .tariff__button:hover:before {
-    height: 600%;
   }
 }
 
@@ -1075,10 +1147,6 @@ button:focus {
     width: 177px;
   }
 
-  .button-purple {
-    width: 177px;
-  }
-
   .intro {
     margin-bottom: 60px;
   }
@@ -1137,6 +1205,12 @@ button:focus {
 
   .intro__title {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tariff__item {
+    margin: 0 auto;
   }
 }
 

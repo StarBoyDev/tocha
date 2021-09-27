@@ -15,10 +15,37 @@ testWebP(function (support) {
   }
 });
 
-// Активація бергер меню
 $(document).ready(function () {
+  // Активація бергер меню
   $(".burger-menu").click(function (event) {
     $(".burger-menu, .header__login, .burger-menu__line").toggleClass("active");
     $("body").toggleClass("no-scroll");
+  });
+
+  // Slick Slider
+  $(".tariff__list").slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          autoplay: true,
+          speed: 1000,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          // autoplay: true,
+          speed: 1000,
+        },
+      },
+    ],
   });
 });

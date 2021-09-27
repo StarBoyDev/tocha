@@ -767,6 +767,8 @@ button:focus {
 
 .tariff__item {
   max-width: 350px;
+  height: 100%;
+  max-height: 387px;
   text-align: center;
   padding: 10px 30px 50px 30px;
   background: #fff;
@@ -802,6 +804,7 @@ button:focus {
   font-family: gilroy-800;
   color: #1d2530;
   margin-bottom: 32px;
+  width: 100%;
 }
 
 .tariff__price {
@@ -813,9 +816,16 @@ button:focus {
 }
 
 .tariff__button {
+  max-width: 287px;
   width: 100%;
   font-size: 18px;
   padding: 12px 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50px;
 }
 
 @media (min-width: 992px) {
@@ -834,15 +844,20 @@ button:focus {
   .button-purple:hover:before {
     height: 280%;
   }
-
-  .tariff__button:hover:before {
-    height: 600%;
-  }
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 970px;
+  }
+
+  .tariff__item {
+    padding: 10px 15px 30px 15px;
+  }
+
+  .tariff__button {
+    bottom: 35px;
+    max-width: 250px;
   }
 }
 
@@ -913,6 +928,34 @@ button:focus {
 
   .feature__text {
     font-size: 16px;
+  }
+
+  .tariff__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .tariff__wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 45%;
+            flex: 1 1 45%;
+    margin-top: 70px;
+  }
+
+  .tariff__item {
+    padding: 10px 30px 30px 30px;
+  }
+
+  .tariff__item:last-child {
+    margin: 0 auto;
+  }
+
+  .tariff__button {
+    max-width: 280px;
+  }
+
+  .tariff__button:hover:before {
+    height: 600%;
   }
 }
 

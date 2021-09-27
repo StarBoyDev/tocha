@@ -661,6 +661,10 @@ button:focus {
   z-index: -1;
 }
 
+.feature {
+  padding-bottom: 82px;
+}
+
 .feature__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -723,6 +727,97 @@ button:focus {
      object-fit: cover;
 }
 
+.tariff {
+  padding-top: 100px;
+  background-color: #fff;
+  margin-bottom: 162px;
+}
+
+.tariff__title {
+  font-family: gilroy-800;
+  font-size: 48px;
+  line-height: 32px;
+  color: #1d2530;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tariff__subtitle {
+  font-family: gilroy-600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1d2530;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tariff__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -15px;
+}
+
+.tariff__wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33%;
+          flex: 0 1 33%;
+  padding: 0 15px;
+}
+
+.tariff__item {
+  max-width: 350px;
+  text-align: center;
+  padding: 10px 30px 50px 30px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 6px;
+  position: relative;
+}
+
+.tariff__item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 61px;
+  background: #f8fbff;
+}
+
+.tariff__name {
+  font-size: 24px;
+  line-height: 48px;
+  color: #685ed6;
+  font-family: gilroy-800;
+  margin-bottom: 40px;
+  z-index: 30;
+  position: relative;
+}
+
+.tariff__text {
+  font-size: 28px;
+  line-height: 40px;
+  font-family: gilroy-800;
+  color: #1d2530;
+  margin-bottom: 32px;
+}
+
+.tariff__price {
+  font-size: 20px;
+  line-height: 30px;
+  color: #1d2530;
+  font-family: gilroy-500;
+  margin-bottom: 46px;
+}
+
+.tariff__button {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 0;
+}
+
 @media (min-width: 992px) {
   .button-rose:hover {
     background: #c39bfb;
@@ -738,6 +833,10 @@ button:focus {
 
   .button-purple:hover:before {
     height: 280%;
+  }
+
+  .tariff__button:hover:before {
+    height: 600%;
   }
 }
 

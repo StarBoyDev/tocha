@@ -732,7 +732,7 @@ button:focus {
 .tariff {
   padding-top: 100px;
   background-color: #fff;
-  margin-bottom: 162px;
+  padding-bottom: 162px;
 }
 
 .tariff__title {
@@ -931,6 +931,10 @@ button:focus {
   .button-purple:hover:before {
     height: 280%;
   }
+
+  .tariff__button:hover:before {
+    height: 500%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1014,6 +1018,7 @@ button:focus {
 
   .tariff {
     padding-top: 54px;
+    padding-bottom: 54px;
   }
 
   .tariff__title {

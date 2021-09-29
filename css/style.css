@@ -761,15 +761,21 @@ button:focus {
 }
 
 .tariff__wrapper {
+  padding: 0 15px 24px 15px;
+  max-width: 350px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33%;
           flex: 0 1 33%;
-  padding: 0 15px 24px 15px;
 }
 
 .tariff__item {
-  max-width: 350px;
-  max-height: 387px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   padding: 10px 30px 50px 30px;
   background: #fff;
@@ -777,6 +783,7 @@ button:focus {
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
   border-radius: 6px;
   position: relative;
+  height: 100%;
 }
 
 .tariff__item:before {
@@ -941,10 +948,6 @@ button:focus {
   .container {
     max-width: 970px;
   }
-
-  .tariff__item {
-    padding: 10px 15px 50px 15px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -1031,8 +1034,13 @@ button:focus {
     margin-bottom: 36px;
   }
 
-  .tariff__item {
-    padding: 10px 30px 30px 30px;
+  .tariff__list {
+    margin: 0 -10px;
+  }
+
+  .tariff__wrapper {
+    padding: 0 10px 24px 10px;
+    max-width: 333px;
   }
 }
 
@@ -1222,5 +1230,11 @@ button:focus {
 @media (max-width: 375px) {
   .intro__info {
     text-align: left;
+  }
+}
+
+@media (max-width: 360px) {
+  .tariff__wrapper {
+    max-width: 290px;
   }
 }

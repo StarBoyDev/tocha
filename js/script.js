@@ -31,6 +31,7 @@ $(document).ready(function () {
     arrows: false,
     dots: false,
     slidesToShow: 3,
+    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 992,
@@ -40,6 +41,8 @@ $(document).ready(function () {
           autoplay: true,
           speed: 1000,
           touchThreshold: 12,
+          waitForAnimate: false,
+          variableWidth: true
         },
       },
       {
@@ -50,6 +53,8 @@ $(document).ready(function () {
           autoplay: true,
           speed: 1000,
           touchThreshold: 12,
+          waitForAnimate: false,
+          variableWidth: true,
         },
       },
     ],

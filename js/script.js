@@ -41,7 +41,6 @@ $(document).ready(function () {
           autoplay: true,
           speed: 1000,
           touchThreshold: 12,
-          waitForAnimate: false,
           variableWidth: true
         },
       },
@@ -53,7 +52,6 @@ $(document).ready(function () {
           autoplay: true,
           speed: 1000,
           touchThreshold: 12,
-          waitForAnimate: false,
           variableWidth: true,
         },
       },
